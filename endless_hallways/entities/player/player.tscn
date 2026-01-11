@@ -1,16 +1,56 @@
-[gd_scene load_steps=4 format=3 uid="uid://hkofnldfvk2p"]
+[gd_scene load_steps=10 format=3 uid="uid://hkofnldfvk2p"]
 
 [ext_resource type="Script" uid="uid://c2x0dp4nsxnq5" path="res://entities/player/player.gd" id="1_abrql"]
 [ext_resource type="Texture2D" uid="uid://dgq6qiq31u2g8" path="res://entities/player/player.png" id="1_symyc"]
+[ext_resource type="Script" uid="uid://baoxeex5v6ait" path="res://entities/player/player_state.gd" id="2_sglur"]
+
+[sub_resource type="Animation" id="Animation_bls4j"]
+resource_name = "idle"
+
+[sub_resource type="Animation" id="Animation_fkugw"]
+resource_name = "run"
+
+[sub_resource type="Animation" id="Animation_8fjmc"]
+resource_name = "jump"
+
+[sub_resource type="Animation" id="Animation_qiwj3"]
+resource_name = "fall"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_26q78"]
+_data = {
+&"fall": SubResource("Animation_qiwj3"),
+&"idle": SubResource("Animation_bls4j"),
+&"jump": SubResource("Animation_8fjmc"),
+&"run": SubResource("Animation_fkugw")
+}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_abrql"]
 size = Vector2(16, 16)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_abrql")
+move_speed = 120.0
+acceleration = 0.1
+deceleration = 0.2
+jump_height = 48.0
+jump_time_to_peak = 0.45
+jump_time_to_descent = 0.35
+max_fall_speed = 320.0
+sustain = 2.0
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="PlayerState" type="Node" parent="."]
+script = ExtResource("2_sglur")
+
+[node name="Art" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Art"]
 texture = ExtResource("1_symyc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Art"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_26q78")
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_abrql")
