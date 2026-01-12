@@ -11,14 +11,14 @@ config_version=5
 [application]
 
 config/name="Endless Hallways"
-run/main_scene="uid://cp5cu2fj0khwl"
+run/main_scene="uid://c4nr5lfa5bxlb"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=320
-window/size/viewport_height=180
+window/size/viewport_width=640
+window/size/viewport_height=360
 window/stretch/mode="viewport"
 
 [importer_defaults]

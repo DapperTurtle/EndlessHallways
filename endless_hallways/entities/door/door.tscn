@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://bshh1rymp5cup"]
+[gd_scene load_steps=2 format=3 uid="uid://bshh1rymp5cup"]
 
-[node name="Door" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://d3tth8xfgphhw" path="res://entities/door/door.png" id="1_05v0y"]
+
+[node name="Door" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -4)
+texture = ExtResource("1_05v0y")
+hframes = 2
