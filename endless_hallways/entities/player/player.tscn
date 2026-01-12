@@ -27,14 +27,14 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_sglur"]
 radius = 8.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_abrql")
 move_speed = 120.0
 acceleration = 0.1
 deceleration = 0.2
 jump_height = 48.0
-jump_time_to_peak = 0.45
-jump_time_to_descent = 0.35
+jump_time_to_peak = 0.4
+jump_time_to_descent = 0.3
 max_fall_speed = 320.0
 sustain = 2.0
 
