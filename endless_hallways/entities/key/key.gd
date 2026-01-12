@@ -1,15 +1,42 @@
-extends Area2D
+extends CharacterBody2D
 
 
-# Called when the node enters the scene tree for the first time.
+@export var speed : float
+
+
+var collected = false
+var door_position
+var target_position
+
+
 func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
 	pass
 
 
-func _on_body_entered(body):
+func _process(delta):
+	if collected == false:
+		stop()
+	if collected == true:
+		move()
+	
+	move_and_slide()
+
+
+func stop():
+	velocity = Vector2.ZERO
+
+
+func move():
+	door_position = Global.door_position
+	target_position = (door_position - position).normalized()
+	
+	velocity = target_position * speed
+
+
+func _on_area_2d_body_entered(body):
+	if body.is_in_group("player"):
+		collected = true
+
+
+func _on_area_2d_area_entered(area):
 	queue_free()

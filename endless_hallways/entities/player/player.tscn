@@ -30,12 +30,12 @@ radius = 8.0
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_abrql")
 move_speed = 120.0
-acceleration = 0.1
-deceleration = 0.2
+acceleration = 0.2
+deceleration = 0.4
 jump_height = 48.0
 jump_time_to_peak = 0.4
 jump_time_to_descent = 0.3
-max_fall_speed = 320.0
+max_fall_speed = 480.0
 sustain = 2.0
 
 [node name="PlayerState" type="Node" parent="."]
