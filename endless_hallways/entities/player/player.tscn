@@ -4,17 +4,17 @@
 [ext_resource type="Texture2D" uid="uid://dgq6qiq31u2g8" path="res://entities/player/player.png" id="1_symyc"]
 [ext_resource type="Script" uid="uid://baoxeex5v6ait" path="res://entities/player/player_state.gd" id="2_sglur"]
 
+[sub_resource type="Animation" id="Animation_qiwj3"]
+resource_name = "fall"
+
 [sub_resource type="Animation" id="Animation_bls4j"]
 resource_name = "idle"
-
-[sub_resource type="Animation" id="Animation_fkugw"]
-resource_name = "run"
 
 [sub_resource type="Animation" id="Animation_8fjmc"]
 resource_name = "jump"
 
-[sub_resource type="Animation" id="Animation_qiwj3"]
-resource_name = "fall"
+[sub_resource type="Animation" id="Animation_fkugw"]
+resource_name = "run"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_26q78"]
 _data = {
@@ -44,6 +44,7 @@ script = ExtResource("2_sglur")
 [node name="Art" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Art"]
+position = Vector2(0, -4)
 texture = ExtResource("1_symyc")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Art"]
