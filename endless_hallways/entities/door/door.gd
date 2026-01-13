@@ -28,3 +28,4 @@ func _on_body_entered(body):
 
 func _on_area_entered(area):
 	open = true
+	Global.emit_signal("door_unlock")

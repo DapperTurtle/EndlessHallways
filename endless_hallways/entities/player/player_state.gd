@@ -2,9 +2,12 @@ extends StateMachine
 
 
 func _ready():
-	for s in ["IDLE", "RUN", "JUMP", "FALL"]: add_state(s)
+	for s in ["IDLE", "RUN", "JUMP", "FALL", "KEY_COLLECT"]: add_state(s)
 	
 	call_deferred("set_state", states.IDLE)
+	
+	Global.connect("key_collect", key_collect)
+	Global.connect("door_unlock", door_unlock)
 
 
 func _state_logic(delta):
@@ -16,6 +19,9 @@ func _state_logic(delta):
 			parent.move()
 			parent.apply_gravity(delta)
 			parent.jump_sustain()
+		
+		states.KEY_COLLECT:
+			parent.stop()
 
 
 func _get_transition(delta):
@@ -64,3 +70,11 @@ func _enter_state(new_state, old_state):
 			
 		states.FALL: 
 			parent.animation.play("fall")
+
+
+func key_collect():
+	state = states.KEY_COLLECT
+
+
+func door_unlock():
+	state = states.IDLE
