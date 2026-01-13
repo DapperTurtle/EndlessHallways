@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c4nr5lfa5bxlb"]
 
-[ext_resource type="PackedScene" uid="uid://cp5cu2fj0khwl" path="res://test.tscn" id="1_tam42"]
+[ext_resource type="PackedScene" uid="uid://cp5cu2fj0khwl" path="res://levels/tutorial/12.tscn" id="1_tam42"]
 
 [node name="Test2" type="Control"]
 layout_mode = 3

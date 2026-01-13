@@ -1,6 +1,9 @@
 extends Area2D
 
 
+@export var next_level : String
+
+
 var open = false
 
 
@@ -23,7 +26,8 @@ func _process(delta):
 func _on_body_entered(body):
 	if body.is_in_group("player"):
 		if open == true:
-			get_tree().reload_current_scene()
+			if next_level:
+				get_tree().change_scene_to_file(next_level)
 
 
 func _on_area_entered(area):
