@@ -31,5 +31,6 @@ func _on_body_entered(body):
 
 
 func _on_area_entered(area):
-	open = true
-	Global.emit_signal("door_unlock")
+	if area.is_in_group("key"):
+		open = true
+		Global.emit_signal("door_unlock")

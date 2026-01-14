@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Endless Hallways"
-run/main_scene="uid://1hrp0w63pqxi"
+run/main_scene="uid://xuidekg6lsgo"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
