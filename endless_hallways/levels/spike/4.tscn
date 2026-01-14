@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://dsoi6bniadwq3"]
+
+[ext_resource type="PackedScene" uid="uid://yrwkwsb1pddn" path="res://entities/tilemap/tile_map.tscn" id="1_f3rnk"]
+[ext_resource type="PackedScene" uid="uid://bshh1rymp5cup" path="res://entities/door/door.tscn" id="3_wcyxb"]
+[ext_resource type="PackedScene" uid="uid://hkofnldfvk2p" path="res://entities/player/player.tscn" id="4_1psjw"]
+[ext_resource type="PackedScene" uid="uid://cii55yedycoxm" path="res://entities/key/key.tscn" id="5_lcjeg"]
+
+[node name="4" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_f3rnk")]
+layer_0/tile_data = PackedInt32Array(786432, 0, 0, 851968, 0, 0, 917504, 0, 0, 983040, 0, 0, 1048576, 0, 0, 786433, 0, 0, 851969, 0, 0, 917505, 0, 0, 983041, 0, 0, 1048577, 0, 0, 786434, 0, 0, 851970, 0, 0, 917506, 0, 0, 983042, 0, 0, 1048578, 0, 0, 786435, 0, 0, 851971, 0, 0, 917507, 0, 0, 983043, 0, 0, 1048579, 0, 0, 786436, 0, 0, 851972, 0, 0, 917508, 0, 0, 983044, 0, 0, 1048580, 0, 0, 786437, 0, 0, 851973, 0, 0, 917509, 0, 0, 983045, 0, 0, 1048581, 0, 0, 786438, 0, 0, 851974, 0, 0, 917510, 0, 0, 983046, 0, 0, 1048582, 0, 0, 786439, 0, 0, 851975, 0, 0, 917511, 0, 0, 983047, 0, 0, 1048583, 0, 0, 851967, 0, 0, 917503, 0, 0, 983039, 0, 0, 1048575, 0, 0, 1114111, 0, 0, 1179647, 0, 0, 1114112, 0, 0, 1114113, 0, 0, 1114114, 0, 0, 1114115, 0, 0, 1114116, 0, 0, 1114117, 0, 0, 1114118, 0, 0, 1114119, 0, 0, 786454, 0, 0, 851990, 0, 0, 917526, 0, 0, 983062, 0, 0, 1048598, 0, 0, 1114134, 0, 0, 786455, 0, 0, 851991, 0, 0, 917527, 0, 0, 983063, 0, 0, 1048599, 0, 0, 1114135, 0, 0, 786456, 0, 0, 851992, 0, 0, 917528, 0, 0, 983064, 0, 0, 1048600, 0, 0, 1114136, 0, 0, 786457, 0, 0, 851993, 0, 0, 917529, 0, 0, 983065, 0, 0, 1048601, 0, 0, 1114137, 0, 0, 786458, 0, 0, 851994, 0, 0, 917530, 0, 0, 983066, 0, 0, 1048602, 0, 0, 1114138, 0, 0, 786459, 0, 0, 851995, 0, 0, 917531, 0, 0, 983067, 0, 0, 1048603, 0, 0, 1114139, 0, 0, 786460, 0, 0, 851996, 0, 0, 917532, 0, 0, 983068, 0, 0, 1048604, 0, 0, 1114140, 0, 0, 786461, 0, 0, 851997, 0, 0, 917533, 0, 0, 983069, 0, 0, 1048605, 0, 0, 1114141, 0, 0, 786452, 0, 0, 851988, 0, 0, 917524, 0, 0, 983060, 0, 0, 1048596, 0, 0, 1114132, 0, 0, 786453, 0, 0, 851989, 0, 0, 917525, 0, 0, 983061, 0, 0, 1048597, 0, 0, 1114133, 0, 0, 786440, 0, 0, 851976, 0, 0, 917512, 0, 0, 983048, 0, 0, 1048584, 0, 0, 1114120, 0, 0, 786441, 0, 0, 851977, 0, 0, 917513, 0, 0, 983049, 0, 0, 1048585, 0, 0, 1114121, 0, 0, 786451, 0, 0, 851987, 0, 0, 917523, 0, 0, 983059, 0, 0, 1048595, 0, 0, 1114131, 0, 0, 786442, 0, 0, 851978, 0, 0, 917514, 0, 0, 983050, 0, 0, 1048586, 0, 0, 1114122, 0, 0, 327679, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 262160, 0, 0, 262161, 0, 0, 262162, 0, 0, 262163, 0, 0, 262168, 0, 0, 262169, 0, 0, 262170, 0, 0, 262171, 0, 0, 262172, 0, 0, 262173, 0, 0, 262174, 0, 0, 786462, 0, 0, 851998, 0, 0, 917534, 0, 0, 983070, 0, 0, 1048606, 0, 0, 1114142, 0, 0, 327699, 0, 0, 393235, 0, 0, 458771, 0, 0, 524307, 0, 0, 589843, 0, 0, 655379, 0, 0, 720915, 0, 0, 786443, 0, 0, 851979, 0, 0, 917515, 0, 0, 983051, 0, 0, 1048587, 0, 0, 1114123, 0, 0, 327698, 0, 0, 393234, 0, 0, 458770, 0, 0, 524306, 0, 0, 589842, 0, 0, 655378, 0, 0, 720914, 0, 0, 786450, 0, 0, 851986, 0, 0, 917522, 0, 0, 983058, 0, 0, 1048594, 0, 0, 1114130, 0, 0, 393215, 0, 0, 458751, 0, 0, 524287, 0, 0, 589823, 0, 0, 327680, 0, 0, 393216, 0, 0, 458752, 0, 0, 524288, 0, 0, 131090, 0, 0, 196626, 0, 0, 131091, 0, 0, 196627, 0, 0, 18, 0, 0, 65554, 0, 0, 19, 0, 0, 65555, 0, 0, 196612, 1, 65536, 196613, 1, 65536, 720903, 1, 65536, 720904, 1, 65536, 196617, 1, 65536, 196618, 1, 65536, 196622, 1, 65536, 196623, 1, 65536, 720916, 1, 65536, 720917, 1, 65536, 720922, 1, 65536, 720923, 1, 65536, 196632, 1, 65536, 196633, 1, 65536)
+
+[node name="Door" parent="." instance=ExtResource("3_wcyxb")]
+position = Vector2(184, 184)
+next_level = "res://levels/spike/5.tscn"
+
+[node name="Player" parent="." instance=ExtResource("4_1psjw")]
+position = Vector2(56, 184)
+
+[node name="Key" parent="." instance=ExtResource("5_lcjeg")]
+position = Vector2(24, 24)
+
+[connection signal="body_entered" from="TileMap/Spike" to="TileMap/Spike" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@158490" to="TileMap/@Area2D@158490" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@158491" to="TileMap/@Area2D@158491" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@158492" to="TileMap/@Area2D@158492" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@158493" to="TileMap/@Area2D@158493" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@158494" to="TileMap/@Area2D@158494" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@158495" to="TileMap/@Area2D@158495" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@158496" to="TileMap/@Area2D@158496" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@158497" to="TileMap/@Area2D@158497" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@158498" to="TileMap/@Area2D@158498" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@158499" to="TileMap/@Area2D@158499" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@158500" to="TileMap/@Area2D@158500" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@158501" to="TileMap/@Area2D@158501" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@158502" to="TileMap/@Area2D@158502" method="_on_body_entered"]

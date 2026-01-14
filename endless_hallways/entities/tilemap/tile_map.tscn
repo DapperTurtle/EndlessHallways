@@ -1,15 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://yrwkwsb1pddn"]
+[gd_scene load_steps=6 format=3 uid="uid://yrwkwsb1pddn"]
 
 [ext_resource type="Texture2D" uid="uid://gi8g7lf3mdf0" path="res://entities/tilemap/tile.png" id="1_2h4ev"]
+[ext_resource type="PackedScene" uid="uid://cpw4tfmxpij4f" path="res://entities/spike/spike.tscn" id="2_dxbv2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dxbv2"]
 texture = ExtResource("1_2h4ev")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_xmbm4"]
+scenes/1/scene = ExtResource("2_dxbv2")
+
 [sub_resource type="TileSet" id="TileSet_xmbm4"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_dxbv2")
+sources/1 = SubResource("TileSetScenesCollectionSource_xmbm4")
 
 [node name="TileMap" type="TileMap"]
 tile_set = SubResource("TileSet_xmbm4")

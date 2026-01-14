@@ -40,4 +40,5 @@ func _on_area_2d_body_entered(body):
 
 
 func _on_area_2d_area_entered(area):
-	queue_free()
+	if area.is_in_group("door"):
+		queue_free()
