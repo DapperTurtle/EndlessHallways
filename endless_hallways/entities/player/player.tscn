@@ -35,7 +35,7 @@ deceleration = 0.4
 jump_height = 48.0
 jump_time_to_peak = 0.4
 jump_time_to_descent = 0.3
-max_fall_speed = 480.0
+max_fall_speed = 360.0
 sustain = 2.0
 
 [node name="PlayerState" type="Node" parent="."]
