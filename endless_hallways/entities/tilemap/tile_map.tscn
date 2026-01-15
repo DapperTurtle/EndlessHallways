@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://yrwkwsb1pddn"]
+[gd_scene load_steps=7 format=3 uid="uid://yrwkwsb1pddn"]
 
 [ext_resource type="Texture2D" uid="uid://gi8g7lf3mdf0" path="res://entities/tilemap/tile.png" id="1_2h4ev"]
 [ext_resource type="PackedScene" uid="uid://cpw4tfmxpij4f" path="res://entities/spike/spike.tscn" id="2_dxbv2"]
+[ext_resource type="PackedScene" uid="uid://8wb4jkfh3t5r" path="res://entities/crumbling_block/crumbling_block.tscn" id="3_xmbm4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dxbv2"]
 texture = ExtResource("1_2h4ev")
@@ -10,6 +11,7 @@ texture = ExtResource("1_2h4ev")
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_xmbm4"]
 scenes/1/scene = ExtResource("2_dxbv2")
+scenes/2/scene = ExtResource("3_xmbm4")
 
 [sub_resource type="TileSet" id="TileSet_xmbm4"]
 physics_layer_0/collision_layer = 1

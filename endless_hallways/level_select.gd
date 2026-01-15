@@ -25,3 +25,7 @@ func _on_cursed_toggled(toggled_on):
 	elif toggled_on == false:
 		Global.cursed = false
 	print(Global.cursed)
+
+
+func _on_crumble_pressed():
+	get_tree().change_scene_to_file("res://levels/crumble/1.tscn")

@@ -37,6 +37,10 @@ text = "Tutorial Level"
 layout_mode = 2
 text = "Spike Level"
 
+[node name="Crumble" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Crumble Level"
+
 [node name="Cursed" type="CheckBox" parent="."]
 layout_mode = 0
 offset_right = 24.0
@@ -45,4 +49,5 @@ text = "Cursed"
 
 [connection signal="pressed" from="VBoxContainer/Tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="VBoxContainer/Spike" to="." method="_on_spike_pressed"]
+[connection signal="pressed" from="VBoxContainer/Crumble" to="." method="_on_crumble_pressed"]
 [connection signal="toggled" from="Cursed" to="." method="_on_cursed_toggled"]
