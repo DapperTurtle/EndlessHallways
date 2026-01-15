@@ -36,12 +36,15 @@ var mirrored = true
 
 ## Cursed Mode
 var initial_position = null
+var curse_spawned = false
 var curse_scene = preload("res://entities/cursed_player/cursed_player.tscn")
+@onready var spawn_timer = $SpawnTimer
 
 
 ## Core Process
 func _ready():
 	initial_position = global_position
+	Global.player_position = position
 
 
 func _physics_process(delta):
@@ -139,3 +142,9 @@ func spawn_curse():
 	var curse = curse_scene.instantiate()
 	curse.global_position = initial_position
 	get_parent().add_child(curse)
+
+
+func _on_spawn_timer_timeout():
+	if curse_spawned == false:
+		spawn_curse()
+		curse_spawned = true

@@ -1,6 +1,9 @@
 extends StateMachine
 
 
+var timer_started = false
+
+
 func _ready():
 	for s in ["IDLE", "RUN", "JUMP", "FALL"]: add_state(s)
 	
@@ -55,8 +58,6 @@ func _enter_state(new_state, old_state):
 	match state:
 		states.IDLE:
 			parent.animation.play("idle")
-			if Global.cursed == true:
-				parent.spawn_curse()
 			
 		states.RUN: 
 			parent.animation.play("run")
@@ -66,3 +67,11 @@ func _enter_state(new_state, old_state):
 			
 		states.FALL: 
 			parent.animation.play("fall")
+
+
+func _exit_state(old_state, new_state):
+	if old_state == states.IDLE:
+		if Global.cursed == true:
+			if timer_started == false:
+				parent.spawn_timer.start(1)
+				timer_started = true
