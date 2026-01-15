@@ -34,7 +34,16 @@ var mirrored = true
 @onready var animation = $Art/AnimationPlayer
 
 
+## Cursed Mode
+var initial_position = null
+var curse_scene = preload("res://entities/cursed_player/cursed_player.tscn")
+
+
 ## Core Process
+func _ready():
+	initial_position = global_position
+
+
 func _physics_process(delta):
 	if is_on_floor():
 		can_jump = true
@@ -47,6 +56,8 @@ func _physics_process(delta):
 		coyote_time()
 	
 	screen_wrap()
+	
+	Global.player_position = position
 	
 	move_and_slide()
 
@@ -111,7 +122,7 @@ func jump_buffer():
 	jump_buffered = false
 
 
-
+## Screen Wrap
 func screen_wrap():
 	if position.x <= -10:
 		position.x = get_viewport_rect().size.x
@@ -121,3 +132,10 @@ func screen_wrap():
 		position.y = get_viewport_rect().size.y
 	if position.y >= get_viewport_rect().size.y + 10:
 		position.y = 0
+
+
+## Spawn Curse
+func spawn_curse():
+	var curse = curse_scene.instantiate()
+	curse.global_position = initial_position
+	get_parent().add_child(curse)

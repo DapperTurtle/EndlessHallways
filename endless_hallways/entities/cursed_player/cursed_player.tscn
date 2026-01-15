@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://p8nau1p4bme"]
+
+[ext_resource type="Script" uid="uid://dlmhhsoqanh1e" path="res://entities/cursed_player/cursed_player.gd" id="1_ioalv"]
+[ext_resource type="Texture2D" uid="uid://bm3t1vt0gkrd2" path="res://entities/cursed_player/cursed_player.png" id="1_sa0qh"]
+
+[node name="CursedPlayer" type="CharacterBody2D"]
+collision_layer = 0
+script = ExtResource("1_ioalv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -4)
+texture = ExtResource("1_sa0qh")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true

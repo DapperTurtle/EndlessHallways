@@ -1,8 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://hkofnldfvk2p"]
+[gd_scene load_steps=11 format=3 uid="uid://hkofnldfvk2p"]
 
 [ext_resource type="Script" uid="uid://c2x0dp4nsxnq5" path="res://entities/player/player.gd" id="1_abrql"]
 [ext_resource type="Texture2D" uid="uid://dgq6qiq31u2g8" path="res://entities/player/player.png" id="1_symyc"]
 [ext_resource type="Script" uid="uid://baoxeex5v6ait" path="res://entities/player/player_state.gd" id="2_sglur"]
+
+[sub_resource type="Animation" id="Animation_sglur"]
+length = 0.001
 
 [sub_resource type="Animation" id="Animation_qiwj3"]
 resource_name = "fall"
@@ -18,6 +21,7 @@ resource_name = "run"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_26q78"]
 _data = {
+&"RESET": SubResource("Animation_sglur"),
 &"fall": SubResource("Animation_qiwj3"),
 &"idle": SubResource("Animation_bls4j"),
 &"jump": SubResource("Animation_8fjmc"),

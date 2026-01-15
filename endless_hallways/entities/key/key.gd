@@ -36,7 +36,6 @@ func move():
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("player"):
 		collected = true
-		Global.emit_signal("key_collect")
 
 
 func _on_area_2d_area_entered(area):
