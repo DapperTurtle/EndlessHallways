@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://p845qrbrkyvv"]
+
+[ext_resource type="PackedScene" uid="uid://yrwkwsb1pddn" path="res://entities/tilemap/tile_map.tscn" id="1_41mtm"]
+[ext_resource type="PackedScene" uid="uid://bshh1rymp5cup" path="res://entities/door/door.tscn" id="2_g7sf7"]
+[ext_resource type="PackedScene" uid="uid://hkofnldfvk2p" path="res://entities/player/player.tscn" id="3_2k6vj"]
+[ext_resource type="PackedScene" uid="uid://cii55yedycoxm" path="res://entities/key/key.tscn" id="4_tarps"]
+
+[node name="10" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_41mtm")]
+layer_0/tile_data = PackedInt32Array(655360, 0, 0, 720896, 0, 0, 786432, 0, 0, 851968, 0, 0, 917504, 0, 0, 983040, 0, 0, 1048576, 0, 0, 1114112, 0, 0, 655361, 0, 0, 720897, 0, 0, 786433, 0, 0, 851969, 0, 0, 917505, 0, 0, 983041, 0, 0, 1048577, 0, 0, 1114113, 0, 0, 655362, 0, 0, 720898, 0, 0, 786434, 0, 0, 851970, 0, 0, 917506, 0, 0, 983042, 0, 0, 1048578, 0, 0, 1114114, 0, 0, 655363, 0, 0, 720899, 0, 0, 786435, 0, 0, 851971, 0, 0, 917507, 0, 0, 983043, 0, 0, 1048579, 0, 0, 1114115, 0, 0, 720895, 0, 0, 786431, 0, 0, 851967, 0, 0, 917503, 0, 0, 983039, 0, 0, 1048575, 0, 0, 1114111, 0, 0, 1179647, 0, 0, 655386, 0, 0, 720922, 0, 0, 786458, 0, 0, 851994, 0, 0, 917530, 0, 0, 983066, 0, 0, 1048602, 0, 0, 1114138, 0, 0, 655387, 0, 0, 720923, 0, 0, 786459, 0, 0, 851995, 0, 0, 917531, 0, 0, 983067, 0, 0, 1048603, 0, 0, 1114139, 0, 0, 655388, 0, 0, 720924, 0, 0, 786460, 0, 0, 851996, 0, 0, 917532, 0, 0, 983068, 0, 0, 1048604, 0, 0, 1114140, 0, 0, 655389, 0, 0, 720925, 0, 0, 786461, 0, 0, 851997, 0, 0, 917533, 0, 0, 983069, 0, 0, 1048605, 0, 0, 1114141, 0, 0, 655390, 0, 0, 720926, 0, 0, 786462, 0, 0, 851998, 0, 0, 917534, 0, 0, 983070, 0, 0, 1048606, 0, 0, 1114142, 0, 0, 655364, 1, 131072, 655365, 1, 131072, 655366, 1, 131072, 655367, 1, 131072, 655368, 1, 131072, 655369, 1, 131072, 655370, 1, 131072, 655371, 1, 131072, 655372, 1, 131072, 655373, 1, 131072, 655374, 1, 131072, 655375, 1, 131072, 655376, 1, 131072, 655377, 1, 131072, 655378, 1, 131072, 655379, 1, 131072, 655380, 1, 131072, 655381, 1, 131072, 589832, 1, 65536, 589833, 1, 65536, 589838, 1, 65536, 589839, 1, 65536, 589844, 1, 65536, 589845, 1, 65536, 327679, 1, 131072, 262144, 1, 131072, 262145, 1, 131072, 262146, 1, 131072, 262147, 1, 131072, 262148, 1, 131072, 262149, 1, 131072, 262150, 1, 131072, 262151, 1, 131072, 262152, 1, 131072, 262153, 1, 131072, 262154, 1, 131072, 262155, 1, 131072, 262156, 1, 131072, 262157, 1, 131072, 262158, 1, 131072, 262159, 1, 131072, 262160, 1, 131072, 262161, 1, 131072, 262162, 1, 131072, 262163, 1, 131072, 262164, 1, 131072, 262165, 1, 131072, 262166, 1, 131072, 262167, 1, 131072, 262169, 1, 131072, 262168, 1, 131072, 196616, 1, 65536, 196617, 1, 65536, 196622, 1, 65536, 196623, 1, 65536, 262170, 0, 0, 262171, 1, 131072, 262172, 1, 131072, 262173, 1, 131072, 262174, 1, 131072, 26, 0, 0, 65562, 0, 0, 131098, 0, 0, 196634, 0, 0, 327706, 0, 0, 393242, 0, 0, 458778, 0, 0, 524314, 0, 0, 589850, 0, 0, 1048592, 0, 0, 1114128, 0, 0, 1048593, 0, 0, 1114129, 0, 0, 1048594, 0, 0, 1114130, 0, 0, 1048595, 0, 0, 1114131, 0, 0, 1048580, 1, 65536, 1048581, 1, 65536, 1048582, 1, 65536, 1048583, 1, 65536, 1048584, 1, 65536, 1048585, 1, 65536, 1048586, 1, 65536, 1048587, 1, 65536, 1048588, 1, 65536, 1048589, 1, 65536, 1048590, 1, 65536, 1048591, 1, 65536)
+
+[node name="Door" parent="." instance=ExtResource("2_g7sf7")]
+position = Vector2(296, 248)
+
+[node name="Player" parent="." instance=ExtResource("3_2k6vj")]
+position = Vector2(24, 120)
+
+[node name="Key" parent="." instance=ExtResource("4_tarps")]
+position = Vector2(456, 40)
+
+[connection signal="body_entered" from="TileMap/@Area2D@30875" to="TileMap/@Area2D@30875" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@30876" to="TileMap/@Area2D@30876" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@30877" to="TileMap/@Area2D@30877" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@30878" to="TileMap/@Area2D@30878" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/Spike" to="TileMap/Spike" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@30879" to="TileMap/@Area2D@30879" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@31733" to="TileMap/@Area2D@31733" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@31735" to="TileMap/@Area2D@31735" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@31737" to="TileMap/@Area2D@31737" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@31738" to="TileMap/@Area2D@31738" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@34544" to="TileMap/@Area2D@34544" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@34545" to="TileMap/@Area2D@34545" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@34546" to="TileMap/@Area2D@34546" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@34547" to="TileMap/@Area2D@34547" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@34548" to="TileMap/@Area2D@34548" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@34549" to="TileMap/@Area2D@34549" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@34550" to="TileMap/@Area2D@34550" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@34551" to="TileMap/@Area2D@34551" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@34552" to="TileMap/@Area2D@34552" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@34553" to="TileMap/@Area2D@34553" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@34554" to="TileMap/@Area2D@34554" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@34555" to="TileMap/@Area2D@34555" method="_on_body_entered"]
