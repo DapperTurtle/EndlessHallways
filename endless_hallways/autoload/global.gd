@@ -2,5 +2,5 @@ extends Node
 
 
 var door_position = null
-var cursed = false
+var cursed = true
 var player_position = null
