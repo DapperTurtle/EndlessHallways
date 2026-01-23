@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://bw5sgmh0o7jkh"]
+
+[ext_resource type="Texture2D" uid="uid://c0mnfmdkibkvi" path="res://entities/one_way_platform/one_way_platform.png" id="1_lljy6"]
+[ext_resource type="Script" uid="uid://buwv4jngeytaj" path="res://entities/one_way_platform/one_way_tile.gd" id="2_xgqdj"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nmt2x"]
+texture = ExtResource("1_lljy6")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_8ea05"]
+sources/0 = SubResource("TileSetAtlasSource_nmt2x")
+
+[node name="OneWayTile" type="TileMap"]
+tile_set = SubResource("TileSet_8ea05")
+format = 2
+script = ExtResource("2_xgqdj")
