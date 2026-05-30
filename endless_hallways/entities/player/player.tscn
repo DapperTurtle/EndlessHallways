@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://hkofnldfvk2p"]
+[gd_scene format=3 uid="uid://hkofnldfvk2p"]
 
 [ext_resource type="Script" uid="uid://c2x0dp4nsxnq5" path="res://entities/player/player.gd" id="1_abrql"]
 [ext_resource type="Texture2D" uid="uid://dgq6qiq31u2g8" path="res://entities/player/player.png" id="1_symyc"]
@@ -31,35 +31,33 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_sglur"]
 radius = 8.0
 
-[node name="Player" type="CharacterBody2D" groups=["player"]]
+[node name="Player" type="CharacterBody2D" unique_id=1518984788 groups=["player"]]
 script = ExtResource("1_abrql")
 move_speed = 120.0
 acceleration = 0.2
 deceleration = 0.4
 jump_height = 48.0
-jump_time_to_peak = 0.4
-jump_time_to_descent = 0.3
+jump_time_to_peak = 0.5
+jump_time_to_descent = 0.4
 max_fall_speed = 360.0
 sustain = 2.0
 
-[node name="PlayerState" type="Node" parent="."]
+[node name="PlayerState" type="Node" parent="." unique_id=551013980]
 script = ExtResource("2_sglur")
 
-[node name="Art" type="Node2D" parent="."]
+[node name="Art" type="Node2D" parent="." unique_id=1927971839]
 
-[node name="Sprite2D" type="Sprite2D" parent="Art"]
+[node name="Sprite2D" type="Sprite2D" parent="Art" unique_id=1011703834]
 position = Vector2(0, -4)
 texture = ExtResource("1_symyc")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Art"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Art" unique_id=876555338]
 root_node = NodePath("../..")
-libraries = {
-&"": SubResource("AnimationLibrary_26q78")
-}
+libraries/ = SubResource("AnimationLibrary_26q78")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=704395724]
 shape = SubResource("CircleShape2D_sglur")
 
-[node name="SpawnTimer" type="Timer" parent="."]
+[node name="SpawnTimer" type="Timer" parent="." unique_id=1972046095]
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
